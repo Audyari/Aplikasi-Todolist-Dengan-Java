@@ -1,3 +1,5 @@
+
+
 public class AplikasiTodolist {
     public static String[] model = new String[10];
 
@@ -5,7 +7,7 @@ public class AplikasiTodolist {
 
     public static void main(String[] args) {
 
-        testInput();
+        testViewShowTodoList();
 
     }
 
@@ -125,5 +127,42 @@ public class AplikasiTodolist {
         showTodoList();
 
     }
+
+    /**
+     * Menampilkan view todo list
+     */
+    public static void viewShowTodoList() {
+        while (true) {
+            showTodoList();
+
+            System.out.println("MENU : ");
+            System.out.println("1. Tambah");
+            System.out.println("2. Hapus");
+            System.out.println("x. Keluar");
+
+            var input = input("Pilih");
+
+            if (input.equals("1")) {
+//                viewAddTodoList();
+            } else if (input.equals("2")) {
+//                viewRemoveTodoList();
+            } else if (input.equals("x")) {
+                break;
+            } else {
+                System.out.println("Pilihan tidak dimengerti");
+            }
+        }
+    }
+
+
+    public static void testViewShowTodoList() {
+        addTodoList("Satu");
+        addTodoList("Dua");
+        addTodoList("Tiga");
+        addTodoList("Empat");
+        addTodoList("Lima");
+        viewShowTodoList();
+    }
+
 
 }
