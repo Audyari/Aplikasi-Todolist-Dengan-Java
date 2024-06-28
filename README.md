@@ -10,3 +10,8 @@
    - Menambah todo ke list
    - Mehapus todo dari list
    - Menampilkan todo list
+   
+3. View nya :
+   - Menampilkan todo list
+   - Menampilkan view todo list
+   - Menampilkan view menambahkan todo list

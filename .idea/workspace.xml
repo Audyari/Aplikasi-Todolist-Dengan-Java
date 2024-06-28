@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fc2bf1-b319-47b4-84b9-cffb20f0f238" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/BuatSendiri.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AplikasiTodolist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AplikasiTodolist.java" afterDir="false" />
@@ -37,6 +38,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.AplikasiTodolist.executor": "Run",
+    "Application.BuatSendiri.executor": "Run",
     "Application.TodoListApp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -47,9 +49,16 @@
     "settings.editor.selected.configurable": "preferences.sourceCode"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.AplikasiTodolist">
+  <component name="RunManager" selected="Application.BuatSendiri">
     <configuration name="AplikasiTodolist" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AplikasiTodolist" />
+      <module name="Aplikasi-Todolist-Dengan-Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuatSendiri" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BuatSendiri" />
       <module name="Aplikasi-Todolist-Dengan-Java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -64,6 +73,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BuatSendiri" />
         <item itemvalue="Application.AplikasiTodolist" />
         <item itemvalue="Application.TodoListApp" />
       </list>
