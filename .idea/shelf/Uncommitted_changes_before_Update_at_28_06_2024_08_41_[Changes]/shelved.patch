@@ -1,0 +1,16 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Aplikasi-Todolist-Dengan-Java\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-16LE
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision 206438c4a08241d0b81284506f82be2b5dbab409)
++++ b/README.md	(date 1719538877953)
+@@ -1,2 +1,5 @@
+ # Aplikasi-Todolist-Dengan-Java
+ 
++Prototype
++
++https://xd.adobe.com/view/b0d73a96-5829-4dd7-b8df-ad04cd972212-e584/
