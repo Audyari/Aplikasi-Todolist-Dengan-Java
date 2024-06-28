@@ -1,9 +1,26 @@
 public class AplikasiTodolist {
-    private static final int INITIAL_CAPACITY = 10;
-    private static String[] model = new String[INITIAL_CAPACITY];
+    public static String[] model = new String[10];
+
+    public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) {
-        testRemoveTodoList();
+
+        testInput();
+
+    }
+
+    public static void testInput() {
+        var name = input("Nama");
+        System.out.println("Hi " + name);
+
+        var channel = input("Channel");
+        System.out.println(channel);
+    }
+
+    public static String input(String info) {
+        System.out.print(info + " : ");
+        String data = scanner.nextLine();
+        return data;
     }
 
     private static void testAddTodoList() {
@@ -16,8 +33,7 @@ public class AplikasiTodolist {
 
 
     private static void testShowTodoList() {
-        model[0] = "Belajar Java Dasar";
-        model[1] = "Studi Kasus Java Dasar : Aplikasi Todolist";
+
         showTodoList();
     }
 
