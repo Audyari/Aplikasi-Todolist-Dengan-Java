@@ -3,10 +3,10 @@ public class AplikasiTodolist {
     private static String[] model = new String[INITIAL_CAPACITY];
 
     public static void main(String[] args) {
-        testAddTodoList();
+        testRemoveTodoList();
     }
 
-    private  static void testAddTodoList(){
+    private static void testAddTodoList() {
         for (int i = 0; i < 12; i++) {
             addTodoList("Contoh Todo Ke." + i);
         }
@@ -68,40 +68,46 @@ public class AplikasiTodolist {
             model[i] = temp[i];
         }
     }
+
+
+    /**
+     * Mehapus todo dari list
+     */
+    public static boolean removeTodoList(Integer number) {
+        if ((number - 1) >= model.length) {
+            return false;
+        } else if (model[number - 1] == null) {
+            return false;
+        } else {
+            for (int i = (number - 1); i < model.length; i++) {
+                if (i == (model.length - 1)) {
+                    model[i] = null;
+                } else {
+                    model[i] = model[i + 1];
+                }
+            }
+            return true;
+        }
+    }
+
+    public static void testRemoveTodoList() {
+        addTodoList("Satu");
+        addTodoList("Dua");
+        addTodoList("Tiga");
+        addTodoList("Empat");
+        addTodoList("Lima");
+
+        var result = removeTodoList(6);
+        System.out.println(result);
+
+        result = removeTodoList(7);
+        System.out.println(result);
+
+        result = removeTodoList(2);
+        System.out.println(result);
+
+        showTodoList();
+
+    }
+
 }
-
-//
-//        /**
-//         * Mehapus todo dari list
-//         */
-//        public static boolean removeTodoList () {
-//
-//        }
-//
-////
-//
-//
-//        /**
-//         * Menampilkan view todo list
-//         */
-//        public static void viewShowTodoList () {
-//
-//        }
-//
-//        /**
-//         * Menampilkan view menambahkan todo list
-//         */
-//        public static void viewAddTodoList () {
-//
-//        }
-//
-//        /**
-//         * Menampilkan view menghapus todo list
-//         */
-//        public static void viewRemoveTodoList() {
-//
-//        }
-//
-//
-//    }
-
