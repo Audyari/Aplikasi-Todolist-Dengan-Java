@@ -7,6 +7,7 @@
     <list default="true" id="00fc2bf1-b319-47b4-84b9-cffb20f0f238" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AplikasiTodolist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AplikasiTodolist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuatSendiri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuatSendiri.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
   "keyToString": {
     "Application.AplikasiTodolist.executor": "Run",
     "Application.BuatSendiri.executor": "Run",
+    "Application.TodoList.executor": "Run",
     "Application.TodoListApp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -62,6 +64,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TodoList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TodoList" />
+      <module name="Aplikasi-Todolist-Dengan-Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TodoListApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TodoListApp" />
       <module name="Aplikasi-Todolist-Dengan-Java" />
@@ -73,6 +82,7 @@
       <list>
         <item itemvalue="Application.AplikasiTodolist" />
         <item itemvalue="Application.BuatSendiri" />
+        <item itemvalue="Application.TodoList" />
         <item itemvalue="Application.TodoListApp" />
       </list>
     </recent_temporary>

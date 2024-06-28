@@ -1,9 +1,11 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class BuatSendiri {
-    private static final int MAX_TODO_ITEMS = 10; // Menggunakan konstanta untuk kapasitas maksimum
-    private static ArrayList<String> todos = new ArrayList<>(); // Menggunakan ArrayList untuk fleksibilitas
+    private static final int INITIAL_MAX_TODO_ITEMS = 3; // Kapasitas awal
+    private static int maxTodoItems = INITIAL_MAX_TODO_ITEMS;
+    private static List<String> todos = new ArrayList<>(maxTodoItems);
 
     public static void main(String[] args) {
         displayMenu();
@@ -14,33 +16,46 @@ public class BuatSendiri {
         int choice;
 
         do {
-            System.out.println("TODO List Menu:");
-            System.out.println("1. Display Todo List");
-            System.out.println("2. Add Todo");
-            System.out.println("3. Remove Todo");
-            System.out.println("4. Exit");
-            System.out.print("Enter your choice (1-4): ");
+            printMenu();
+            choice = getMenuChoice(scanner);
 
-            choice = scanner.nextInt();
-            scanner.nextLine(); // Mengonsumsi newline character
-
-            switch (choice) {
-                case 1:
-                    displayTodoList();
-                    break;
-                case 2:
-                    promptAddTodo();
-                    break;
-                case 3:
-                    promptRemoveTodo();
-                    break;
-                case 4:
-                    System.out.println("Exiting...");
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-            }
+            processMenuChoice(choice, scanner);
         } while (choice != 4);
+
+        System.out.println("Exiting...");
+    }
+
+    private static void printMenu() {
+        System.out.println("TODO List Menu:");
+        System.out.println("1. Display Todo List");
+        System.out.println("2. Add Todo");
+        System.out.println("3. Remove Todo");
+        System.out.println("4. Exit");
+        System.out.print("Enter your choice (1-4): ");
+    }
+
+    private static int getMenuChoice(Scanner scanner) {
+        int choice = scanner.nextInt();
+        scanner.nextLine(); // Mengonsumsi newline character
+        return choice;
+    }
+
+    private static void processMenuChoice(int choice, Scanner scanner) {
+        switch (choice) {
+            case 1:
+                displayTodoList();
+                break;
+            case 2:
+                promptAddTodo(scanner);
+                break;
+            case 3:
+                promptRemoveTodo(scanner);
+                break;
+            case 4:
+                break;
+            default:
+                System.out.println("Invalid choice. Please try again.");
+        }
     }
 
     private static void displayTodoList() {
@@ -55,34 +70,45 @@ public class BuatSendiri {
         System.out.println();
     }
 
-    private static void promptAddTodo() {
-        Scanner scanner = new Scanner(System.in);
+    private static void promptAddTodo(Scanner scanner) {
         System.out.print("Enter a new todo: ");
         String newTodo = scanner.nextLine();
 
-        if (todos.size() < MAX_TODO_ITEMS) {
+        if (todos.size() < maxTodoItems) {
             todos.add(newTodo);
             System.out.println("Todo added successfully.");
         } else {
-            System.out.println("Maximum todo items reached. Unable to add new todo.");
+            expandTodoList(newTodo);
+            System.out.println("Todo added successfully. Array size increased.");
         }
         System.out.println();
     }
 
-    private static void promptRemoveTodo() {
-        Scanner scanner = new Scanner(System.in);
+    private static void expandTodoList(String newTodo) {
+        maxTodoItems *= 2; // Memperbesar menjadi dua kali lipat
+        List<String> previousTodos = new ArrayList<>(todos);
+        todos = new ArrayList<>(maxTodoItems);
+        todos.addAll(previousTodos); // Menyalin data sebelumnya
+        todos.add(newTodo); // Menambahkan todo baru
+    }
+
+    private static void promptRemoveTodo(Scanner scanner) {
         displayTodoList();
 
         System.out.print("Enter the number of the todo to remove: ");
         int index = scanner.nextInt();
         scanner.nextLine(); // Mengonsumsi newline character
 
-        if (index >= 1 && index <= todos.size()) {
+        if (isValidTodoIndex(index)) {
             String removedTodo = todos.remove(index - 1);
             System.out.println("Removed todo: " + removedTodo);
         } else {
             System.out.println("Invalid todo number. Please try again.");
         }
         System.out.println();
+    }
+
+    private static boolean isValidTodoIndex(int index) {
+        return index >= 1 && index <= todos.size();
     }
 }
