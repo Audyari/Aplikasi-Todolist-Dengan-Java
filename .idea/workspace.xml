@@ -36,7 +36,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.AplikasiTodolist.executor": "Run",
-    "Application.BuatSendiri.executor": "Run",
+    "Application.BuatSendiri.executor": "Debug",
     "Application.TestInput.executor": "Run",
     "Application.TodoList.executor": "Run",
     "Application.TodoListApp.executor": "Run",
@@ -88,8 +88,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.AplikasiTodolist" />
-        <item itemvalue="Application.TestInput" />
         <item itemvalue="Application.BuatSendiri" />
+        <item itemvalue="Application.TestInput" />
         <item itemvalue="Application.TodoList" />
         <item itemvalue="Application.TodoListApp" />
       </list>
