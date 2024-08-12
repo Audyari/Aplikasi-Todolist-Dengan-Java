@@ -6,8 +6,7 @@ public class ToDoLits {
 
     public static void main(String[] args) {
 
-        testtampilkanHapusData();
-
+        tampilanTodoList();
     }
 
     static void tampilkanDataTodo() {
@@ -73,14 +72,16 @@ public class ToDoLits {
     static boolean hapusDataTodo(int Urutan) {
 
         if (Urutan >= DataTodoList.length) {
+            
             return false;
         }
 
         if (Urutan == 0) {
-            return false;
+        return false;
         }
 
-        if (DataTodoList[Urutan] == null) {
+        if (DataTodoList[Urutan-1] == null) {
+            System.out.println("Kesini");
             return false;
         } else {
             // Misalkan Urutan = 3
@@ -96,6 +97,25 @@ public class ToDoLits {
 
             return true;
         }
+
+    }
+
+    static void testhapusDataTodo() {
+        tambahDataTodo("data 1");
+        tambahDataTodo("data 2");
+        tambahDataTodo("data 3");
+        tambahDataTodo("data 4");
+        tambahDataTodo("data 5");
+
+        hapusDataTodo(1);
+        hapusDataTodo(1);
+        hapusDataTodo(1);
+        hapusDataTodo(1);
+        hapusDataTodo(1);
+        // boolean sukses = hapusDataTodo(1);
+        // System.out.println(sukses);
+
+        tampilanTodoList();
 
     }
 

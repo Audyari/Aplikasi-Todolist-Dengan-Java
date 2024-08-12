@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00fc2bf1-b319-47b4-84b9-cffb20f0f238" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AplikasiTodolist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AplikasiTodolist.java" afterDir="false" />
-    </list>
+    <list default="true" id="00fc2bf1-b319-47b4-84b9-cffb20f0f238" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
